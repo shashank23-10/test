@@ -1,0 +1,397 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* COLORS USED*/
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #e0ba4f;
+  --color-menus: #d4a155;
+  --color-body: black;
+  --color-dark-mode: #79bb57;
+  --color-hover: #e3c285;
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+  --br-sm-2: 0.875rem;
+  --opacity: 1;
+  --box-shadow-1: 0 0.1875rem 0.9375rem rgba(0, 0, 0, 0.3);
+}
+.light-mode {
+  --color-primary: #f7fbf3;
+  --color-secondary: #6685f5;
+  --color-menus: #79bb57;
+  --color-body: #ffffff;
+  --color-dark-mode: #6685f5;
+  --color-hover: #3f68fe;
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #6c7983;
+  --color-grey-2: #6c7983;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #f2eaea;
+  --color-grey-6: #12181b;
+  --opacity: 0.75;
+}
+
+body {
+  background-color: var(--color-body);
+}
+
+/* HEADER */
+.header {
+  background-color: var(--color-menus);
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.header .menu-bar {
+  color: var(--color-white);
+  font-family: "Martel Sans", sans-serif;
+  padding: 1rem;
+  display: flex;
+  position: relative;
+}
+.header .menu-bar .logo a {
+  display: flex;
+  text-decoration: none;
+  color: var(--color-white);
+  margin-right: 6rem;
+}
+
+.header .menu-bar .logo img {
+  width: 5%;
+  padding-right: 1rem;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+.header .menu-bar .logo p {
+  margin-top: 1%;
+}
+/* MENU BAR LINKS  */
+.header .menu-bar .links {
+  margin-left: -35%;
+  margin-top: 0.6%;
+  margin-right: 30%;
+}
+.header .menu-bar .links ul li {
+  list-style: none;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  margin-right: 2.5rem;
+}
+
+.header .menu-bar .links ul li a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.header .menu-bar .links ul li::after {
+  content: " ";
+  width: 0;
+  height: 1px;
+  background: var(--color-white);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s;
+}
+.header .menu-bar .links ul li:hover::after {
+  width: 100%;
+}
+
+.header .menu-bar .links a:hover {
+  transition-delay: 1s;
+}
+
+/* DARK-MODE */
+.menu-bar .dark-mode {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background-color: var(--color-dark-mode);
+  color: white;
+  cursor: pointer;
+  margin-top: 0.5%;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+.dark-mode:hover {
+  background-color: var(--color-black);
+}
+/* FOOTER */
+footer {
+  background-color: var(--color-menus);
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  font-family: "Martel Sans", sans-serif;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+.footer-up {
+  display: flex;
+}
+/* FOOTER LOGO */
+.footer-up .logo img {
+  margin-left: 2rem;
+  width: 18%;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+/* FOOTER LIST */
+.footer-up ul {
+  list-style: none;
+}
+
+/* FOOTER LINKS */
+.footer-up .address {
+  margin-left: -25rem;
+  margin-right: 10rem;
+}
+.footer-up .address p {
+  color: var(--color-white);
+}
+.footer-up .address p:hover {
+  transform: translateX(2rem);
+  transition-delay: 0.2s;
+  cursor: pointer;
+}
+
+/* FOOTER LINKS */
+.footer-up .links {
+  margin-right: 10rem;
+}
+.footer-up .links ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+.footer-up .links ul li:hover {
+  transform: translateX(2rem);
+  transition-delay: 0.3s;
+}
+/* SOCIALS */
+.footer-up .socials {
+  margin-right: 10rem;
+}
+.footer-up .socials a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+.footer-up .socials i {
+  width: 10%;
+  margin-right: 1rem;
+}
+.footer-up .socials li:hover {
+  transform: translateX(2rem);
+  transition-delay: 0.3s;
+}
+
+/*  HR TAG AND COPYRIGHT*/
+hr {
+  margin: 1rem 0rem;
+}
+.copyright {
+  color: var(--color-white);
+  text-align: center;
+}
+
+/*--------------------------------------------------------------------- HOME SECTION -----------------------------------------------------------------  */
+.open {
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  display: flex;
+}
+.open .main-img img {
+  width: 76rem;
+  max-height: 100vh;
+  opacity: var(--opacity);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.open .text {
+  margin-top: 32%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+.open .text h1 {
+  font-size: 4rem;
+  margin: 0 12rem;
+}
+.open .text i {
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1rem;
+}
+/*--------------------------------------------------------------------- ABOUT US -----------------------------------------------------------------  */
+.about-us {
+  margin: 3rem 20%;
+  color: white;
+  text-align: center;
+  font-family: "Martel Sans", sans-serif;
+}
+.about-us .mission {
+  margin-top: 8rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.about-us .vision {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+*---------------------------------------------------------------------
+  TEAM
+  PAGE
+  -----------------------------------------------------------------
+  */
+  .board-members {
+  margin: 2rem 12.5%;
+  color: var(--color-white);
+}
+.board-members h1 {
+  text-align: center;
+  color: var(--color-grey-1);
+  font-size: 2.25rem;
+  margin: 2rem;
+}
+.board-members p {
+  text-align: center;
+  font-family: "Martel Sans", sans-serif;
+  line-height: 120%;
+  color: var(--color-grey-1);
+}
+.board-members .row {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+  margin: 0 10%;
+}
+.board-members .row img {
+  width: 100%;
+  height: 18rem;
+  border-bottom: 0.5rem solid var(--color-gradient);
+  border-radius: 1rem;
+}
+.board-members .row .post {
+  margin-top: 1rem;
+}
+.board-members .col {
+  position: relative;
+  background-color: var(--color-grey-5);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  padding: 0 0 0.5rem 0;
+}
+.board-members .col .hover-items {
+  width: 100%;
+  height: 18rem;
+  background-color: var(--color-menus);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+.board-members .col:hover .hover-items {
+  opacity: 0.8;
+  transform: scale(1);
+}
+.board-members .col .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-members .col .hover-items .icons .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.board-members .col .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+.board-members .col .hover-items .icons .icon:hover {
+  background-color: var(--color-white);
+}
+.board-members .col .hover-items .icons .icon:hover i {
+  color: var(--color-primary);
+}
+
+/*--------------------------------------------------------------------- CONTACT PAGE -----------------------------------------------------------------  */
+.contact {
+  display: flex;
+  color: white;
+  margin: 6rem 12.5%;
+}
+.connect .box {
+  margin-left: 2rem;
+  background-color: var(--color-menus);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+  line-height: 150%;
+  margin-bottom: 2rem;
+}
+.connect .box .button button {
+  padding: 1rem;
+  border-radius: 2.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.connect p {
+  color: var(--color-white);
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1.5rem;
+}
+.connect .name-heading {
+  color: var(--color-white);
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1.5rem;
+}
+.connect .name {
+  margin-left: 2rem;
+  color: var(--color-white);
+  font-family: "Martel Sans", sans-serif;
+  font-size: 1rem;
+}
+.map {
+  margin-left: 4rem;
+  width: 50%;
+}
